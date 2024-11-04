@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Suplementos</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/cart.js" defer></script>
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="cuento.html">Diseña tu cuento</a></li>
+  </ul>
+</nav>
+
+<header>
+  <img src="img/logo.png" alt="Logo de la Tienda" class="logo">
+  <h1>Tu Tienda de Suplementos</h1>
+  <button class="cart-button" onclick="goToCart()">Ir al Carrito (<span id="cart-count">0</span>)</button>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#nuestra-tienda">Nuestra Tienda</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contáctenos</a></li>
+    <li><a href="#cotizacion">Cotización</a></li>
+  </ul>
+</nav>
+
+<section id="nuestra-tienda">
+  <h1>Bienvenidos a Nuestra Tienda de Suplementos</h1>
+  <p>Ofrecemos productos de calidad para ayudar a mejorar tu rendimiento físico y bienestar general.</p>
+  <h2>Conoce a nuestro equipo:</h2>
+  <ul>
+    <li>Daniel Alejandro Rodriguez - Nutricionista</li>
+  </ul>
+</section>
+
+<section id="productos">
+  <h2>Nuestros Productos</h2>
+  <div class="products">
+    <div class="product">
+      <img src="img/proteina.jpg" alt="Proteína Whey">
+      <div class="product-info">
+        <h3>Proteína Whey</h3>
+        <p>Una proteína de alta calidad para apoyar el desarrollo muscular.</p>
+        <p class="price">$40.00</p>
+        <button class="add-to-cart" onclick="addToCart('Proteína Whey', 40)">Agregar al Carrito</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="img/creatina.jpg" alt="Creatina Monohidratada">
+      <div class="product-info">
+        <h3>Creatina Monohidratada</h3>
+        <p>Mejora el rendimiento físico y ayuda en el aumento de fuerza.</p>
+        <p class="price">$25.00</p>
+        <button class="add-to-cart" onclick="addToCart('Creatina Monohidratada', 25)">Agregar al Carrito</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="img/vitaminas.jpg" alt="Multivitamínicos">
+      <div class="product-info">
+        <h3>Multivitamínicos</h3>
+        <p>Complementa tu dieta con vitaminas y minerales esenciales.</p>
+        <p class="price">$15.00</p>
+        <button class="add-to-cart" onclick="addToCart('Multivitamínicos', 15)">Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <h2>Servicios que ofrecemos</h2>
+  <div class="service-list">
+    <div class="service">
+      <img src="img/nutricion.jpg" alt="Asesoría nutricional" class="service-icon">
+      <h3>Asesoría Nutricional Personalizada</h3>
+      <p>Te ayudamos a diseñar un plan de alimentación que se adapte a tus necesidades y objetivos, asegurando un enfoque saludable y efectivo.</p>
+    </div>
+    <div class="service">
+      <img src="img/entrenamiento.jpg" alt="Planificación de rutinas" class="service-icon">
+      <h3>Planificación de Rutinas de Entrenamiento</h3>
+      <p>Creamos rutinas personalizadas que optimizan tu rendimiento y te ayudan a alcanzar tus metas físicas de manera eficiente.</p>
+    </div>
+    <div class="service">
+      <img src="img/suplementos.jpg" alt="Orientación en Suplementos" class="service-icon">
+      <h3>Orientación en Suplementos</h3>
+      <p>Te asesoramos sobre los mejores suplementos para complementar tu dieta, garantizando que sean adecuados para ti.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contáctenos</h2>
+  <p>Puede contactarnos a través de los siguientes medios:</p>
+  <ul>
+    <li>WhatsApp: +123 456 789</li>
+    <li>Celular: +987 654 321</li>
+    <li>Dirección: Calle Falsa 123, Ciudad, País</li>
+  </ul>
+  <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345091876!2d144.95373531590452!3d-37.81627974202262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6432d7b299f61%3A0x5045675218ce6e0!2zTWVsYm91cm5lLCBBdXN0cmFsaWE!5e0!3m2!1ses!2s!4v1610581366029!5m2!1ses!2s"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<section id="cotizacion">
+  <h2>Solicitud de Cotización</h2>
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+    <label for="producto">Producto que desea cotizar:</label>
+    <input type="text" id="producto" name="producto" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <input type="submit" value="Enviar Cotización">
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2024 Tu Tienda de Suplementos. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

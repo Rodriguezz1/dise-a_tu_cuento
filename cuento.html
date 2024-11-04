@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseña tu cuento</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="tienda.html">Tienda</a></li>
+  </ul>
+</nav>
+
+<section class="cuento-container">
+  <h1>Diseña tu cuento</h1>
+  <form id="cuentoForm" class="styled-form">
+    <div class="form-group">
+      <label for="nombre">Nombres y apellidos:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="apodo">Apodo:</label>
+      <input type="text" id="apodo" name="apodo" required>
+    </div>
+    <div class="form-group">
+      <label for="cabello">Color de Cabello:</label>
+      <input type="text" id="cabello" name="cabello" required>
+    </div>
+    <div class="form-group">
+      <label for="ojos">Color de Ojos:</label>
+      <input type="text" id="ojos" name="ojos" required>
+    </div>
+    <div class="form-group">
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" required>
+    </div>
+    <div class="form-group">
+      <label for="hobby">Hobby:</label>
+      <input type="text" id="hobby" name="hobby" required>
+    </div>
+    <button type="button" onclick="crearCuento()">Continuar</button>
+  </form>
+  <div id="cuentoResultado" class="cuento-output"></div>
+</section>
+
+<script>
+  function crearCuento() {
+    const nombreCompleto = document.getElementById("nombre").value;
+    const apodo = document.getElementById("apodo").value;
+    const colorCabello = document.getElementById("cabello").value;
+    const colorOjos = document.getElementById("ojos").value;
+    const edad = document.getElementById("edad").value;
+    const hobby = document.getElementById("hobby").value;
+
+    if (nombreCompleto && apodo && colorCabello && colorOjos && edad && hobby) {
+      const cuento = `
+          <p>En un rincón pintoresco del mundo, vivía <strong>${nombreCompleto}</strong>, aunque todos lo conocían cariñosamente como <strong>${apodo}</strong>. A sus ${edad} años, ${apodo} era famoso por su brillante cabello de color ${colorCabello}, que ondeaba al viento como una bandera en días soleados, y sus ojos ${colorOjos}, que parecían esconder los secretos de la naturaleza misma.</p>
+          <p>Cada día, ${apodo} comenzaba la mañana con su actividad favorita: ${hobby}. No había nadie que pudiera superarlo en eso, y las personas del pueblo a menudo se reunían solo para observarlo y escuchar las historias que contaba mientras practicaba su hobby con una sonrisa en el rostro.</p>
+          <p>Una tarde, mientras ${apodo} estaba inmerso en su pasión, un anciano misterioso apareció entre la multitud. "Tienes un don especial, ${apodo}," dijo el anciano con una voz suave y sabia. "Tus ojos ${colorOjos} ven más allá de lo que otros ven, y tu amor por ${hobby} puede traer felicidad y unión a todos nosotros."</p>
+          <p>Inspirado por estas palabras, ${apodo} decidió usar su talento para organizar un gran festival donde todos pudieran compartir sus pasiones y descubrir nuevas formas de alegría. Las risas, las historias y los momentos inolvidables llenaron el aire, y desde entonces, ${apodo} fue recordado no solo como un experto en su hobby, sino como el corazón vibrante de su comunidad.</p>
+          <p>Y así, ${nombreCompleto} continuó su vida, siempre buscando nuevas formas de inspirar y compartir, con el cabello ${colorCabello} ondeando al viento y los ojos ${colorOjos} brillando de emoción.</p>
+        `;
+      document.getElementById("cuentoResultado").innerHTML = cuento;
+    } else {
+      alert("Por favor, complete todos los campos para crear su cuento.");
+    }
+  }
+</script>
+</body>
+</html>
